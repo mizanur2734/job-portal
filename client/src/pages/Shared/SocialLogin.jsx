@@ -7,7 +7,7 @@ const SocialLogin = ({from}) => {
     const navigate = useNavigate()
     const handleGoogleSignIn = () =>{
         signInWithGoogle()
-        .then(() =>{
+        .then((result) =>{
             console.log(result.user)
             navigate(from || '/')
         })
